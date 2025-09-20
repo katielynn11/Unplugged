@@ -99,7 +99,7 @@ header {
   padding: 15px 0;
 }
 
-header .content-wrappper {
+header .content-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -181,7 +181,7 @@ aside {
 }
 
 .features h2 {
-  margin-bottom: 60px 0;
+  margin-bottom: 60px;
 }
 
 .features article {
@@ -425,7 +425,7 @@ aside {
     width: 65%;
   }
 
-  .footer content {
+  .footer-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
