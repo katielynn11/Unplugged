@@ -84,6 +84,17 @@ textarea {
 }
 
 /* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* ==========================================================================
    Author's custom styles
    ========================================================================== */
 /*General Styles*/
@@ -129,6 +140,14 @@ p {
   line-height: 1.285;
 }
 
+img {
+  width: 100%;
+}
+
+figure {
+  margin: 0;
+}
+
 address {
   font-style: normal;
 }
@@ -155,6 +174,10 @@ header .content-wrapper {
   flex-flow: row wrap;
 }
 
+header figure {
+  width: 60%;
+}
+
 .header-divider {
   background: #3a3a3a;
   width: 100%;
@@ -165,7 +188,7 @@ header .content-wrapper {
 header nav {
   width: 60%;
   font-size: 1.125em;
-  font-weight: bold;
+  font-weight: 700;
   text-transform: uppercase;
 
 }
@@ -174,6 +197,10 @@ header nav ul {
   display: flex;
   justify-content: space-around;
   width: 100%;
+}
+
+header nav ul li {
+  font-size: 1.125em;
 }
 
 footer {
@@ -218,6 +245,10 @@ footer .copyright {
 /* Hero Area */
 
 .hero-area {
+  background: url(../img/unplugged-retreat.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 500px;
   display: flex;
   justify-content: center;
 }
@@ -237,7 +268,7 @@ aside {
   background: #527158;
 }
 
-aside . form {
+aside .form {
   margin-top: 30px;
 }
 
@@ -266,6 +297,9 @@ input[type=button] {
 /* Features */
 
 .features {
+  background: url(../img/unplugged-retreat-features.jpg);
+  background-size: cover;
+  background-position: center;
   display: flex;
   justify-content: center;
 }
@@ -368,8 +402,7 @@ input[type=button] {
  * Hide visually and from screen readers
  */
 
-.hidden,
-[hidden] {
+.hidden {
   display: none !important;
 }
 
@@ -382,16 +415,16 @@ input[type=button] {
  *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
  */
 
-.sr-only {
+.visuallyhidden {
   border: 0;
-  clip: rect(0, 0, 0, 0);
+  clip: rect(0 0 0 0);
   height: 1px;
   margin: -1px;
   overflow: hidden;
   padding: 0;
   position: absolute;
-  white-space: nowrap;
   width: 1px;
+  white-space: nowrap;
   /* 1 */
 }
 
@@ -401,15 +434,15 @@ input[type=button] {
  * https://www.drupal.org/node/897638
  */
 
-.sr-only.focusable:active,
-.sr-only.focusable:focus {
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
   clip: auto;
   height: auto;
   margin: 0;
   overflow: visible;
   position: static;
-  white-space: inherit;
   width: auto;
+  white-space: inherit;
 }
 
 /*
@@ -432,18 +465,14 @@ input[type=button] {
  *    `:before` to contain the top-margins of child elements.
  */
 
-.clearfix::before,
-.clearfix::after {
+.clearfix:before,
+.clearfix:after {
   content: " ";
   display: table;
 }
 
 .clearfix::after {
   clear: both;
-}
-
-aside .form {
-  margin-top: 30px;
 }
 
 
@@ -500,6 +529,10 @@ aside .form {
 
   /*Hero Area*/
 
+  .hero-area {
+    min-height: 600px;
+  }
+
   .hero-area h1 {
     font-size: 3em;
     line-height: 1;
@@ -535,7 +568,7 @@ aside .form {
   }
 
   .features .features-item-description {
-    width: 50%;
+    width: 62%;
   }
 
   /*Reviews*/
@@ -549,6 +582,7 @@ aside .form {
     width: 85%;
   }
 
+  .reviews article figure,
   .reviews article div {
     width: 49%;
   }
@@ -596,7 +630,7 @@ aside .form {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding-top: 20px
+    padding-top: 20px;
   }
 
   .mission-content p {
@@ -640,7 +674,7 @@ aside .form {
   }
 }
 
-@media only screen and (mid-width: 1200px) {
+@media only screen and (min-width: 1200px) {
 
   /*Desktop styles here*/
   .content-wrapper {
@@ -733,7 +767,7 @@ aside .form {
 
   .faq h2 {
     width: 100%;
-    font-size 3em;
+    font-size: 3em;
   }
 
   .faq h4,
@@ -753,11 +787,12 @@ aside .form {
 @media print {
 
   *,
-  *::before,
-  *::after {
-    background: #fff !important;
+  *:before,
+  *:after {
+    background: transparent !important;
     color: #000 !important;
     /* Black prints faster */
+    -webkit-box-shadow: none !important;
     box-shadow: none !important;
     text-shadow: none !important;
   }
@@ -767,11 +802,11 @@ aside .form {
     text-decoration: underline;
   }
 
-  a[href]::after {
+  a[href]:after {
     content: " (" attr(href) ")";
   }
 
-  abbr[title]::after {
+  abbr[title]::fter {
     content: " (" attr(title) ")";
   }
 
@@ -779,8 +814,8 @@ aside .form {
    * Don't show links that are fragment identifiers,
    * or use the `javascript:` pseudo protocol
    */
-  a[href^="#"]::after,
-  a[href^="javascript:"]::after {
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
     content: "";
   }
 
