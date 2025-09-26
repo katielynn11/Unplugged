@@ -36,47 +36,52 @@
       </nav>
     </div>
   </header>
+
   <main class="faq">
     <div class="content-wrapper">
-      <h2>Frequently Asked Questions</h2>
+      <h1>Frequently Asked Questions</h1>
       <div class="faq-content">
-        <h4>How do I get to the Unplugged retreat?</h4>
+        <h2>How do I get to the Unplugged retreat?</h2>
         <p>Lorem ipsum dolor sit amet, consectetur
           adipiscing elit, sed do eiusmod tempor
           incididunt ut labore et dolore magna aliqua.
           Quis ipsum suspendisse ultrices gravida.</p>
       </div>
       <div class="faq-content">
-        <h4>What kind of team is right for the Unplugged retreat?</h4>
+        <h2>What kind of team is right for the Unplugged retreat?</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
           sed do eiusmod tempor incididunt ut labore et dolore magna
           aliqua. Quis ipsum suspendisse ultrices gravida.</p>
       </div>
       <div class="faq-content">
-        <h4>What size teams can you accommodate?</h4>
+        <h2>What size teams can you accommodate?</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
           sed do eiusmod tempor incididunt ut labore et dolore magna
           aliqua.</p>
       </div>
       <div class="faq-content">
-        <h4>Is there really no wifi available?</h4>
+        <h2>Is there really no wifi available?</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
           sed do eiusmod tempor incididunt ut labore et dolore magna
           aliqua. Quis ipsum suspendisse ultrices gravida.</p>
       </div>
+    </div>
   </main>
+
   <footer>
     <div class="content-wrapper">
       <div class="footer-contact">
         <div class="contact">
-          <h4>Contact</h4>
-          <address>555-555-5555</address>
-          <address>hello@unplugged.com</address>
+          <h3>Contact</h3>
+          <address>
+            <p>
+              555-555-5555<br>
+              hello@unplugged.com
+            </p>
+          </address>
         </div>
-      </div>
-    </div>
     <div class="social">
-      <h4>Social</h4>
+      <h3>Social</h3>
       <div class="social-icons">
         <p>
           <a href="https://www.facebook.com/Skillcrush/" target="_blank" aria-label="Facebook"><i aria-hidden="true"
@@ -93,21 +98,33 @@
       </div>
     </div>
     </div>
+    </div>
+
     <div class="copyright">
       <p>Copyright 2025 | Unplugged</p>
     </div>
-    </div>
   </footer>
-  <script src="../js/vendor/modernizr-3.11.2.min.js"></script>
+
+  <script src="../js/vendor/modernizr-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script>
+    window.jQuery || document.write('<script src="../js/vendor/jquery-3.3.1.min.js"><\/script>')
+  </script>
   <script src="../js/plugins.js"></script>
   <script src="../js/main.js"></script>
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+    window.ga = function () {
+      ga.q.push(arguments);
+    };
+    ga.q = [];
+    ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto');
+    ga('send', 'pageview')
   </script>
-  <script src="https://www.google-analytics.com/analytics.js" async></script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
 </body>
 
 </html>

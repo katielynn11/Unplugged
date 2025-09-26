@@ -36,10 +36,11 @@
       </nav>
     </div>
   </header>
+
   <main>
     <section class="mission">
       <div class="content-wrapper">
-        <h2>Our Mission - we want to make you the team you always wanted to be.</h2>
+        <h1>Our Mission - we want to make you the team you always wanted to be.</h1>
         <div class="mission-content">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
@@ -52,47 +53,58 @@
         </div>
       </div> <!-- mission content wrapper ends -->
     </section>
-    <section>
-      <div class="map">
+
+    <section class="map">
         <figure>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5874.489738991621!2d-88.42093152501677!3d42.59254792038364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88058bc6e142ea55%3A0xfa4a44e1259ef755!2s333%20Main%20St%2C%20Lake%20Geneva%2C%20WI%2053147!5e0!3m2!1sen!2sus!4v1758843418647!5m2!1sen!2sus"
             width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"></iframe>
         </figure>
-      </div>
     </section>
+
     <section class="contact-section">
       <div class="content-wrapper">
         <h2>Contact us, because you all need this.</h2>
         <div class="contact-content">
           <div>
-            <h4>General Information</h4>
-            <address>333 Main St, Lake Geneva, WI 53147</address>
-            <address>555-555-5555
-              hello@unplugged.com</address>
+            <h3>General Information</h3>
+            <address>
+              <p>
+                333 Main St, Lake Geneva, WI 53147<br>
+                555-555-5555<br>
+                hello@unplugged.com
+              </p>
+              </address>
           </div>
           <div>
-            <h4>Chat with a Facilitator</h4>
-            <address>555-555-5556</address>
-            <address>facilitator@unplugged.com</address>
+            <h3>Chat with a Facilitator</h3>
+            <address>
+              <p>
+                555-555-5556<br>
+                facilitator@unplugged.com
+              </p>
+              </address>
           </div>
         </div>
       </div>
     </section>
   </main>
+
   <footer>
     <div class="content-wrapper">
       <div class="footer-contact">
         <div class="contact">
-          <h4>Contact</h4>
-          <address>555-555-5555</address>
-          <address>hello@unplugged.com</address>
+          <h3>Contact</h3>
+          <address>
+            <p>
+            555-555-5555<br>
+            hello@unplugged.com
+            </p>
+          </address>
         </div>
-      </div>
-    </div>
     <div class="social">
-      <h4>Social</h4>
+      <h3>Social</h3>
       <div class="social-icons">
           <p>
               <a href="https://www.facebook.com/Skillcrush/" target="_blank" aria-label="Facebook"><i aria-hidden="true" class="fab fa-facebook-f"></i></a>
@@ -107,21 +119,32 @@
         </div>
         </div>
       </div>
+
     <div class="copyright">
       <p>Copyright 2025 | Unplugged</p>
     </div>
-    </div>
   </footer>
-  <script src="../js/vendor/modernizr-3.11.2.min.js"></script>
+
+  <script src="../js/vendor/modernizr-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script>
+    window.jQuery || document.write('<script src="../js/vendor/jquery-3.3.1.min.js"><\/script>')
+  </script>
   <script src="../js/plugins.js"></script>
   <script src="../js/main.js"></script>
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+    window.ga = function () {
+      ga.q.push(arguments);
+    };
+    ga.q = [];
+    ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto');
+    ga('send', 'pageview')
   </script>
-  <script src="https://www.google-analytics.com/analytics.js" async></script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
 </body>
 
 </html>
